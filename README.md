@@ -10,3 +10,8 @@ Aquí pongo mis recortes de código a repasar del curso Eloquent Javascript y re
 // Ejercicio 1
 console.log("test")
 ```
+
+```js
+// Ejercicio 2
+console.log("test")
+```
