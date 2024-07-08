@@ -11,7 +11,7 @@ saludar(){
 get nombre(){
   return this._nombre;
 }
-set nombre(nuevoNombre){
+set cambiarNombre(nuevoNombre){
   this._nombre = nuevoNombre; 
 }
 }
@@ -23,7 +23,7 @@ let player2 = new Player('Pepita', 'rojo');
 console.log(player1.nombre);
 
 // SET
-player1.nombre = 'ALBERTO';
+player1.cambiarNombre = 'ALBERTO';
 console.log(player1.nombre);
 player2.nombre = 'Christina';
 console.log(player2.nombre);
@@ -39,7 +39,25 @@ class Pet extends Player{
   set colorPiel(nuevoColorPiel){
 this.colorPiel = nuevoColorPiel;
   }
+  comer(){
+    return 'yo como manzanas';
+}
+saludar(){
+  return super.saludar() + ' además soy una mascota';
 }
 
 let pet1 = new Pet('Yoshi', 'invisible', 'verde');
 console.log(pet1);
+
+console.log(pet1._nombre);
+pet1.cambiarNombre = 'Rufus';
+console.log(pet1.nombre);
+
+// GET
+console.log(pet1.colorPiel);
+// SET
+pet1.colorPiel = 'marron';
+console.log(pet1.colorPiel);
+
+console.log(pet1.comer());
+console.log(pet1.saludar());
